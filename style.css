@@ -1,6 +1,54 @@
-@layer reset, base, tokens, typography, layout, components, utilities, page;
+@layer tokens, base, typography, layout, components, utilities, page;
 
-@layer reset {
+@layer tokens {
+  :root {
+    color-scheme: light dark;
+    --font-body: system-ui, -apple-system, serif;
+    --font-heading: system-ui, -apple-system, serif;
+    --fs-h1: 8rem;
+    --fs-h2: 6rem;
+    --fs-h3: 5rem;
+    --fs-h4: 3.2rem;
+    --fs-h5: 2.5rem;
+    --fs-h6: 2rem;
+    --fs-body: 1.8rem;
+    --fs-small: 1.6rem;
+    --fw-heading: 500;
+    --fw-body: 400;
+    --lh-heading: 1.2em;
+    --lh-body: 1.4em;
+    --color-black: #000;
+    --color-white: #fff;
+    --sec-margin: 9rem;
+    --sec-padding: 9rem;
+    --cta-padding: 2rem 4rem;
+    --container: 1440px;
+    --container-spacing: 20px;
+    --screen-laptop: 1336px;
+    --screen-tablet: 1036px;
+    --screen-mob-lg: 767px;
+    --screen-mob: 540px;
+    --transition: all 0.3s ease-in-out;
+  }
+
+  :root[data-theme="light"] {
+    --color-background: #F5F5F0;
+    --color-foreground: #2F3F52;
+    --color-primary: #395164;
+    --color-accent: #D0BD96;
+    --color-transparent: transparent;
+  }
+
+  :root[data-theme="dark"] {
+    --color-background: #0f172a;
+    --color-foreground: #e2e8f0;
+    --color-primary: #60a5fa;
+    --color-accent: #fbbf24;
+    --color-transparent: transparent;
+  }
+}
+
+@layer base {
   *,
   *::before,
   *::after {
@@ -8,9 +56,6 @@
     margin: 0;
     padding: 0;
   }
-}
-
-@layer base {
   html {
     font-size: 62.5%;
     -webkit-text-size-adjust: 100%;
@@ -74,54 +119,6 @@
   }
   [hidden] {
     display: none;
-  }
-}
-
-@layer tokens {
-  :root {
-    color-scheme: light dark;
-    --font-body: system-ui, -apple-system, serif;
-    --font-heading: system-ui, -apple-system, serif;
-    --fs-h1: 8rem;
-    --fs-h2: 6rem;
-    --fs-h3: 5rem;
-    --fs-h4: 3.2rem;
-    --fs-h5: 2.5rem;
-    --fs-h6: 2rem;
-    --fs-body: 1.8rem;
-    --fs-small: 1.6rem;
-    --fw-heading: 500;
-    --fw-body: 400;
-    --lh-heading: 1.2em;
-    --lh-body: 1.4em;
-    --color-black: #000;
-    --color-white: #fff;
-    --sec-margin: 9rem;
-    --sec-padding: 9rem;
-    --cta-padding: 2rem 4rem;
-    --container: 1440px;
-    --container-spacing: 20px;
-    --screen-laptop: 1336px;
-    --screen-tablet: 1036px;
-    --screen-mob-lg: 767px;
-    --screen-mob: 540px;
-    --transition: all 0.3s ease-in-out;
-  }
-
-  :root[data-theme="light"] {
-    --color-background: #F5F5F0;
-    --color-foreground: #2F3F52;
-    --color-primary: #395164;
-    --color-accent: #D0BD96;
-    --color-transparent: transparent;
-  }
-
-  :root[data-theme="dark"] {
-    --color-background: #0f172a;
-    --color-foreground: #e2e8f0;
-    --color-primary: #60a5fa;
-    --color-accent: #fbbf24;
-    --color-transparent: transparent;
   }
 }
 
