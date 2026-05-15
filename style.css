@@ -280,19 +280,19 @@
     border: 1px solid;
     max-width: fit-content;
   }
-  .cta:is(.cta-primary, &[data-variant="primary"]) {
+  .cta:is(.cta-primary, [data-variant="primary"]) {
     background-color: var(--color-primary);
     border-color: var(--color-black);
     color: var(--color-white);
   }
-  .cta:is(.cta-outline, &[data-variant="outline"]) {
+  .cta:is(.cta-outline, [data-variant="outline"]) {
     background-color: var(--color-transparent);
-    border-color: var(--color-white);
-    color: var(--color-white);
+    border-color: var(--color-black);
+    color: var(--color-black);
   }
   .cta:hover {
     background-color: var(--color-accent);
-    color: #000;
+    color: var(--color-black);
     border-color: var(--color-accent);
   }
   .sec-padding { padding-block: var(--sec-padding); }
